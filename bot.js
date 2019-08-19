@@ -48,7 +48,7 @@ client.on('message', async (message) => {
 			switch (order) {
 				case 'generate':
 					let size = args.shift() || 10;
-					if (size < 10 || size > 50) return message.channel.send('يمكن ادخال رقم ما بين العشرة والخمسين فقط');
+					if (size < 10 || size > 50) return message.channel.send(':exclamation: يمكن ادخال رقم ما بين العشرة والخمسين فقط ');
 					let colors = palette('rainbow', size);
 					colors.map((color, idx) => {
 						setTimeout(() => {
