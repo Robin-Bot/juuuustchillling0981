@@ -160,6 +160,19 @@ client.on('message', message => {
   });
 
 
+client.on('message', message =>{
+  if(message.content.startsWith(prefix + 'add')) {
+    let args = message.content.split(" ").slice(1).join(" ");
+    if(!args) return message.channel.send('**Please type the emoji ID after the command!**')
+    if(args.length < "18" || args.length > "18" || isNaN(args)) return message.channel.send(`**This emoji Can't be Found :x:**`)
+    message.guild.createEmoji(`https://cdn.discordapp.com/emojis/${args}.png`, `${args}`).catch(mstry => {
+     return message.channel.send(`**This emoji Can't be Found :x:**`)
+    })
+    message.channel.send(`**Successfully Added The Emoji ✅**`)
+  }
+})
+
+
 
 
 client.login(process.env.BOT_TOKEN);
