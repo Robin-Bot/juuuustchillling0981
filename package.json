@@ -1,0 +1,19 @@
+{
+    "name": "axel",
+    "version": "1.0.0",
+    "description": "",
+    "main": "bot.js",
+    "scripts": {
+      "test": "node bot.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "discord.js": "^11.5.1",
+      "dotenv": "^8.1.0",
+      "firebase-admin": "^8.3.0",
+      "google-palette": "^1.1.0",
+      "lodash.toarray": "^4.4.0"
+    }
+  }
